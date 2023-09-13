@@ -269,5 +269,23 @@ public class altaCajero extends JFrame implements metodosCajero, validaciones{
 
 
 
+	@Override
+	public boolean verSiEstaVacio() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+
+	@Override
+	public int existeUsuario() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+
 	
 }
