@@ -171,4 +171,10 @@ public class bajaCajero extends JFrame implements validaciones, metodosCajero {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public int existeUsuario() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'existeUsuario'");
+	}
 }
