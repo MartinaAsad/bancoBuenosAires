@@ -131,7 +131,7 @@ public class modificarCajero extends JFrame implements metodosCajero, validacion
 	}
 
 	@Override
-	public boolean verSiExiste() {
+	public boolean verSiExiste() {/*VER ESTE METODO QUE ONDA*/
 		String infoCampo=nroCajero.getText();
 		String infoCampo2=nroSucursal.getText();
 		
@@ -223,6 +223,12 @@ public class modificarCajero extends JFrame implements metodosCajero, validacion
 	public boolean verSiEstaVacio() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public int existeUsuario() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
