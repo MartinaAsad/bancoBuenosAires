@@ -219,4 +219,10 @@ public class modificarCajero extends JFrame implements metodosCajero, validacion
 		
 	}
 
+	@Override
+	public boolean verSiEstaVacio() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

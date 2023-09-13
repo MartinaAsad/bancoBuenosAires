@@ -46,6 +46,7 @@ public class opcionesEmpleado extends JFrame {
 		JButton botonAltaUsuario = new JButton("Alta usuario");
 		botonAltaUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
 		botonAltaUsuario.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -64,6 +65,8 @@ public class opcionesEmpleado extends JFrame {
 		JButton botonAltaCajero = new JButton("Alta cajero");
 		botonAltaCajero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				altaCajero ac=new altaCajero();
+				ac.setVisible(true);
 			}
 		});
 		botonAltaCajero.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -73,6 +76,8 @@ public class opcionesEmpleado extends JFrame {
 		JButton btnBajaCajero = new JButton("Baja cajero");
 		btnBajaCajero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				bajaCajero bc=new bajaCajero();
+				bc.setVisible(true);
 			}
 		});
 		btnBajaCajero.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -82,6 +87,8 @@ public class opcionesEmpleado extends JFrame {
 		JButton btnModificarCajero = new JButton("Modificar cajero");
 		btnModificarCajero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				modificarCajero mc=new modificarCajero();
+				mc.setVisible(true);
 			}
 		});
 		btnModificarCajero.setFont(new Font("Tahoma", Font.PLAIN, 16));

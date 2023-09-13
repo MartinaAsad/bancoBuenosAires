@@ -165,4 +165,10 @@ public class bajaCajero extends JFrame implements validaciones, metodosCajero {
 		}
 		return verificar;
 	}
+
+	@Override
+	public boolean verSiEstaVacio() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
