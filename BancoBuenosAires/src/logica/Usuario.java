@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import conexion.Conexion;
+import interfazMetodos.opcionesCliente;
 
 public class Usuario implements metodosUsuario{
 	private String nombres;
@@ -106,11 +107,13 @@ public class Usuario implements metodosUsuario{
                 resultSet = stmt.executeQuery();
                 if (resultSet.next()) {
                     JOptionPane.showMessageDialog(null, "listo");
-                    validarContrasena = true;
+                    opcionesCliente oc=new opcionesCliente();
+					oc.setVisible(true);
+					validarContrasena = true;
                     resultSet.close();
                     stmt.close();
                 } else {
-                    JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos");
+                    JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseï¿½a incorrectos");
                     break;
                 }
             } catch (Exception e2) {
