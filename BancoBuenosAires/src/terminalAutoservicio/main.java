@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import interfazMetodos.opcionesCliente;
+import interfazMetodos.opcionesEmpleado;
+import interfazMetodos.retirarDinero;
 import logica.Empleado;
 import logica.Usuario;
 
@@ -14,6 +17,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import java.awt.Font;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -26,6 +30,8 @@ public class main extends JFrame {
 	private JPasswordField passwordField;
 	Usuario us=new Usuario();
 	Empleado empleado=new Empleado();
+	String nombreUsuario=us.getNombreUsuario();
+	String contrasena=us.getContrasena();
 
 	/**
 	 * Launch the application.
@@ -51,6 +57,8 @@ public class main extends JFrame {
 		setBounds(100, 100, 609, 415);
 		this.setLocationRelativeTo(null);//aparece en el medio
 		setTitle("Banco Buenos Aires");
+		
+		
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(244, 244, 225));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -78,9 +86,20 @@ public class main extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String usuario=textFieldUsuario.getText();
 				char[] contra=passwordField.getPassword();
-				
-				if(us.iniciarSesion(usuario, contra)!=true) {
-					empleado.iniciarSesion(usuario, contra);
+				String contra2=String.valueOf(contra);
+				//us.iniciarSesion(usuario, contra);
+				if(us.iniciarSesion(usuario, contra)) {
+					us.setNombreUsuario(usuario);
+					us.setContrasena(contra2);
+					/*System.out.println(us.getNombreUsuario());
+					System.out.println(us.getContrasena());
+					JOptionPane.showMessageDialog(null, "gf");*/
+				}else {
+					//empleado.iniciarSesion(usuario, contra);
+					//JOptionPane.showMessageDialog(null, "gf2");
+					retirarDinero rd=new retirarDinero();
+					rd.traerDatosSesion(usuario, contra);
+					rd.setVisible(true);
 				}
 			}
 		});
@@ -91,5 +110,9 @@ public class main extends JFrame {
 		passwordField = new JPasswordField();
 		passwordField.setBounds(39, 246, 260, 37);
 		contentPane.add(passwordField);
+		
+		/*String usuario=textFieldUsuario.getText();
+		char[] contra=passwordField.getPassword();
+		String contra2=String.valueOf(contra);*/
 	}
 }

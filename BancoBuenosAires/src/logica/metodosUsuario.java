@@ -15,5 +15,7 @@ public interface metodosUsuario {
 	public void cambioDeClave();
 	
 	public void verHistorial();
+
+	public void traerDatosSesion(String usuario, char [] contra);
 	
 }
