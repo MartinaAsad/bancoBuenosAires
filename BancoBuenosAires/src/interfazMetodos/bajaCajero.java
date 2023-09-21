@@ -54,6 +54,7 @@ public class bajaCajero extends JFrame implements validaciones, metodosCajero {
 	public bajaCajero() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 367, 242);
+		setTitle("Baja cajero");
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
